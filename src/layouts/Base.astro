@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -29,6 +30,7 @@ const navLinks = [
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <title>{title} | StepD Music</title>
+    <ClientRouter />
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-deep)]/95 backdrop-blur-md">
