@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Warm industrial — concrete, rust, signal flare */
+  --color-base: #f5f0eb;
+  --color-surface: #eae4dd;
+  --color-elevated: #ddd6cd;
+  --color-deep: #1c1917;
+  --color-deep-surface: #292524;
+  --color-border: #d1c9bf;
+  --color-border-dark: #44403c;
+
+  --color-accent: #e85d26;
+  --color-accent-hover: #f97316;
+  --color-accent-muted: #c2410c;
+
+  --color-text: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #a8a29e;
+  --color-text-on-dark: #e7e5e4;
+  --color-text-secondary-on-dark: #a8a29e;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-base);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}

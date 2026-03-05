@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Content Creator License" description="License terms for using StepD Music in your content.">
+  <section class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+    <p class="text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] mb-4">License</p>
+    <h1 class="text-[2.25rem] md:text-[3rem] font-black leading-tight tracking-tight mb-8">
+      Content Creator License
+    </h1>
+
+    <div class="space-y-6 text-[1.05rem] text-[var(--color-text-secondary)] leading-relaxed">
+      <p>
+        We make music inspired by games, and we want the gaming community to use it. If you're a content creator — streamer, YouTuber, TikToker, podcaster, whatever — here's how you can use StepD Music in your work.
+      </p>
+
+      <div class="border border-[var(--color-border)] rounded-lg bg-[var(--color-surface)] p-6 md:p-8 space-y-5">
+        <h2 class="text-[1.1rem] font-bold text-[var(--color-text)]">You're free to use our music if you:</h2>
+        <ul class="space-y-3">
+          {[
+            'Credit StepD Music in your video description, stream overlay, or show notes',
+            'Link back to stepdmusic.com or any of our streaming profiles',
+            'Use the music as background, intro/outro, or montage soundtrack',
+            'Are creating non-commercial or ad-supported content (YouTube, Twitch, TikTok, etc.)',
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-600 font-bold text-[1.1rem] leading-6 flex-shrink-0">+</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="border border-[var(--color-border)] rounded-lg bg-[var(--color-surface)] p-6 md:p-8 space-y-5">
+        <h2 class="text-[1.1rem] font-bold text-[var(--color-text)]">Please don't:</h2>
+        <ul class="space-y-3">
+          {[
+            'Re-upload or redistribute our tracks as standalone audio',
+            'Use our music in NFT projects or AI training datasets',
+            'Claim ownership or register content ID claims against our music',
+            'Use our tracks in content that promotes hate, violence, or discrimination',
+          ].map(item => (
+            <li class="flex items-start gap-3">
+              <span class="text-red-600 font-bold text-[1.1rem] leading-6 flex-shrink-0">&times;</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="border border-[var(--color-border)] rounded-lg bg-[var(--color-surface)] p-6 md:p-8">
+        <h2 class="text-[1.1rem] font-bold text-[var(--color-text)] mb-3">Commercial use</h2>
+        <p>
+          If you want to use our music in a commercial project (ads, branded content, games, apps, film), reach out and we'll work something out. We're reasonable people.
+        </p>
+        <p class="mt-4">
+          Contact us at <a href="mailto:hello@stepdmusic.com" class="text-[var(--color-accent)] hover:text-[var(--color-accent-muted)] transition-colors font-semibold">hello@stepdmusic.com</a>
+        </p>
+      </div>
+
+      <p class="text-[0.85rem] text-[var(--color-text-muted)]">
+        This is a human-readable summary, not a legal document. We reserve the right to update these terms. When in doubt, just ask.
+      </p>
+    </div>
+  </section>
+</Base>

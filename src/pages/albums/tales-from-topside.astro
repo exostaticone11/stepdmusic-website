@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const tracks = [
+  'North Complex Camper',
+  'Friendly',
+  'Free Loadout',
+  'Dam Goblin',
+  'Scrappy',
+  'Justified',
+  'Pink Or Purple',
+  'Rocketeer Killer',
+  'We Just Wanna Go Home',
+  'Good At The End',
+];
+---
+
+<Base title="Tales from Topside" description="Tales from Topside — StepD Music's debut album inspired by ARC Raiders.">
+  <section class="bg-[var(--color-deep)] text-[var(--color-text-on-dark)]">
+    <div class="max-w-4xl mx-auto px-6 py-20 md:py-28">
+      <div class="flex flex-col md:flex-row gap-10 md:gap-14 items-start">
+        <div class="flex-shrink-0 mx-auto md:mx-0">
+          <img
+            src="/images/cover1080.jpg"
+            alt="Tales from Topside — album cover"
+            width="300"
+            height="300"
+            class="rounded-lg shadow-2xl shadow-black/60"
+          />
+        </div>
+
+        <div class="flex-1">
+          <p class="text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] mb-3">Debut Album</p>
+          <h1 class="text-[2rem] md:text-[2.5rem] font-black leading-tight tracking-tight mb-2">Tales from Topside</h1>
+          <p class="text-[var(--color-text-secondary-on-dark)] mb-6">2025 &middot; Inspired by ARC Raiders &middot; 10 tracks</p>
+
+          <p class="text-[1rem] text-[var(--color-text-secondary-on-dark)] leading-relaxed mb-8">
+            From camping snipers at North Complex to desperate pleas of "we just wanna go home" — this is what gaming sounds like when you turn it into music with your family.
+          </p>
+
+          <div class="flex flex-wrap gap-3 mb-10">
+            <a href="https://open.spotify.com/album/5Ev9fjxfmquKNAzEln03cL" target="_blank" rel="noopener" class="stream-btn">Spotify</a>
+            <a href="https://music.youtube.com/playlist?list=OLAK5uy_m5Ff0JemPx2z7reoCpqdQU86Mn0tBwb0Y" target="_blank" rel="noopener" class="stream-btn">YouTube Music</a>
+            <a href="https://music.apple.com/us/album/tales-from-topside/1873734922" target="_blank" rel="noopener" class="stream-btn">Apple Music</a>
+            <a href="https://music.amazon.ca/albums/B0GKXF5RFV" target="_blank" rel="noopener" class="stream-btn">Amazon</a>
+            <a href="https://link.deezer.com/s/32mend6oZspeFKUbEg48U" target="_blank" rel="noopener" class="stream-btn">Deezer</a>
+            <a href="https://tidal.com/album/494906607" target="_blank" rel="noopener" class="stream-btn">Tidal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Track list -->
+      <div class="mt-12 pt-8 border-t border-[var(--color-border-dark)]">
+        <h2 class="text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-6">Tracks</h2>
+        <ol class="space-y-1">
+          {tracks.map((track, i) => (
+            <li class="flex items-center gap-4 py-3 px-3 -mx-3 rounded-lg hover:bg-white/5 transition-colors border-b border-white/5 last:border-0">
+              <span class="text-[0.75rem] text-[var(--color-text-muted)] w-6 text-right font-mono tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+              <span class="text-[0.95rem] font-medium">{track}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .stream-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-secondary-on-dark);
+    transition: all 0.2s;
+  }
+  .stream-btn:hover {
+    color: white;
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+  }
+</style>

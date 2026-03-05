@@ -1,0 +1,112 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Home">
+  <!-- Hero — dark band -->
+  <section class="bg-[var(--color-deep)] text-[var(--color-text-on-dark)] overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center gap-12 md:gap-20">
+      <!-- Album art -->
+      <div class="relative group flex-shrink-0">
+        <div class="absolute -inset-4 bg-[var(--color-accent)]/15 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+        <img
+          src="/images/cover1080.jpg"
+          alt="Tales from Topside — album cover"
+          width="420"
+          height="420"
+          class="relative rounded-lg w-[280px] md:w-[400px] shadow-2xl shadow-black/60"
+        />
+      </div>
+
+      <div class="text-center md:text-left">
+        <p class="text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-accent)] mb-5">Latest Release</p>
+        <h1 class="text-[2.5rem] md:text-[4rem] font-black leading-[0.95] tracking-tight mb-5">
+          Tales from<br />Topside
+        </h1>
+        <p class="text-[1.05rem] text-[var(--color-text-secondary-on-dark)] max-w-md mb-10 leading-relaxed">
+          10 tracks inspired by ARC Raiders. Written, performed, and produced by a stepdad and his stepdaughters.
+        </p>
+
+        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+          <a href="https://open.spotify.com/album/5Ev9fjxfmquKNAzEln03cL" target="_blank" rel="noopener" class="stream-btn">Spotify</a>
+          <a href="https://music.youtube.com/playlist?list=OLAK5uy_m5Ff0JemPx2z7reoCpqdQU86Mn0tBwb0Y" target="_blank" rel="noopener" class="stream-btn">YouTube Music</a>
+          <a href="https://music.apple.com/us/album/tales-from-topside/1873734922" target="_blank" rel="noopener" class="stream-btn">Apple Music</a>
+          <a href="https://music.amazon.ca/albums/B0GKXF5RFV" target="_blank" rel="noopener" class="stream-btn">Amazon</a>
+          <a href="https://link.deezer.com/s/32mend6oZspeFKUbEg48U" target="_blank" rel="noopener" class="stream-btn">Deezer</a>
+          <a href="https://tidal.com/album/494906607" target="_blank" rel="noopener" class="stream-btn">Tidal</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About teaser — light -->
+  <section>
+    <div class="max-w-3xl mx-auto px-6 py-20 md:py-28 text-center">
+      <h2 class="text-[1.5rem] md:text-[2rem] font-extrabold tracking-tight mb-6 leading-snug">
+        A stepdad and his stepdaughters turning gaming adventures into songs.
+      </h2>
+      <p class="text-[1.05rem] text-[var(--color-text-secondary)] max-w-xl mx-auto leading-relaxed mb-8">
+        Part storytelling, part inside jokes, part family time. We craft lyrics together, compose in our home studio, and embrace the tools that are already part of our lives.
+      </p>
+      <a href="/about" class="inline-block text-[0.875rem] font-bold text-[var(--color-accent)] hover:text-[var(--color-accent-muted)] transition-colors">
+        More about us &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- Track list preview -->
+  <section class="bg-[var(--color-surface)] border-y border-[var(--color-border)]">
+    <div class="max-w-3xl mx-auto px-6 py-16">
+      <h3 class="text-[0.75rem] font-semibold uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-6 text-center">10 Tracks</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-3">
+        {[
+          'North Complex Camper',
+          'Friendly',
+          'Free Loadout',
+          'Dam Goblin',
+          'Scrappy',
+          'Justified',
+          'Pink Or Purple',
+          'Rocketeer Killer',
+          'We Just Wanna Go Home',
+          'Good At The End',
+        ].map((track, i) => (
+          <div class="flex items-center gap-4 py-2 border-b border-[var(--color-border)]">
+            <span class="text-[0.75rem] text-[var(--color-text-muted)] w-5 text-right font-mono tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+            <span class="text-[0.9rem] font-medium">{track}</span>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/lyrics" class="text-[0.85rem] font-bold text-[var(--color-accent)] hover:text-[var(--color-accent-muted)] transition-colors">Read the lyrics &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Also on -->
+  <section>
+    <div class="max-w-6xl mx-auto px-6 py-12 text-center">
+      <p class="text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-[var(--color-text-muted)]">Also on TikTok &middot; Instagram &middot; Reels &middot; Shorts</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .stream-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-secondary-on-dark);
+    transition: all 0.2s;
+  }
+  .stream-btn:hover {
+    color: white;
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+  }
+</style>
